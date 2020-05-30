@@ -52,8 +52,9 @@ int main(){
 	printf("begin:\n");
 	Pthread_create(&p1,NULL,producer,100);
 	Pthread_create(&p2,NULL,consumer,100);
-	Pthread_join(&p1,NULL);
-	Pthread_join(&p2,NULL);
+
+	Pthread_join(p1,NULL);
+	Pthread_join(p2,NULL);
 	printf("end.\n");
 	return 0;
 }
